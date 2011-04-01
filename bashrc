@@ -7,5 +7,6 @@ export PATH
 export NODE_HOME='/usr/local/lib/node'
 # -G add color to ls and -F to show / for folders and @ for symlinks
 alias ls='ls -FG'
+alias ll='ls -FGla'
 # other aliases
 alias sshvm='ssh dickwolf@local.test'
