@@ -1,4 +1,6 @@
-PATH=/usr/local:$PATH
+# Add /usr/local/bin FIRST in path to allow homebrew-installed apps to be found
+# first
+PATH=/usr/local/bin:$PATH
 export PATH
 
 #export GEM_HOME='/usr/local/homebrew/Cellar/gems/1.8'
