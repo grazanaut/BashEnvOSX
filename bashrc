@@ -4,7 +4,7 @@ PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
 export PATH
 
 # Add git branch to prompt (if in repo)
-export PS1='\h:\W \u\$(__git_ps1 " (%s)")\$ '
+export PS1='\h:\W \u$(__git_ps1 " (%s)")\$ '
 
 #export GEM_HOME='/usr/local/homebrew/Cellar/gems/1.8'
 export NODE_HOME='/usr/local/lib/node'
