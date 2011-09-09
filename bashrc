@@ -3,6 +3,20 @@
 PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
 export PATH
 
+##
+## Git settings
+##
+
+#
+# Git Autocomplete
+#
+if [ ! -f ~/.git-completion.bash ]; then
+  curl -o ~/.git-completion.bash https://github.com/git/git/raw/master/contrib/completion/git-completion.bash -L
+fi
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
 # Add git branch to prompt (if in repo)
 export PS1='\h:\W \u$(__git_ps1 " (%s)")\$ '
 
