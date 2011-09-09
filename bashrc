@@ -17,6 +17,13 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
+#
+# Set default github committer
+# NOTE!!! Please change this if you are not me, and have simply pulled my bashrc config!!!
+#
+git config --global user.name "Paul Graham"
+git config --global user.email grazanaut@gmail.com
+
 # Add git branch to prompt (if in repo)
 export PS1='\h:\W \u$(__git_ps1 " (%s)")\$ '
 
