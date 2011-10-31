@@ -4,6 +4,12 @@ PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
 export PATH
 
 ##
+## GD VM stuff
+##
+
+export VM_PLATFORM_JS_BACKOFFICE=~/gd/platform-frontend
+
+##
 ## Git settings
 ##
 
