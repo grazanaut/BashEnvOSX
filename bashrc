@@ -39,5 +39,8 @@ export NODE_HOME='/usr/local/lib/node'
 alias ls='ls -FG'
 alias ll='ls -FGla'
 alias nodester='/usr/local/node_modules/nodester-cli/bin/nodester.js' 
+if [ -f /usr/local/bin/mvim ]; then
+  alias vim='/usr/local/bin/mvim' 
+fi
 # other aliases
 alias sshvm='ssh dickwolf@local.test'
