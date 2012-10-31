@@ -44,3 +44,8 @@ if [ -f /usr/local/bin/mvim ]; then
 fi
 # other aliases
 alias sshvm='ssh dickwolf@local.test'
+
+# alias brew installation of ctags if installed
+if [ -f `brew --prefix`/bin/ctags ]; then
+  alias ctags="`brew --prefix`/bin/ctags"
+fi
