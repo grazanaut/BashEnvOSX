@@ -10,9 +10,9 @@ if [ -f $HOME/.bash_profile ]; then
   mv $HOME/.bash_profile $BACKUP_DIR/bash_profile
 fi
 
-#if [ -f $HOME/.bashrc ]; then
-#  mv $HOME/.bashrc $BACKUP_DIR/bashrc
-#fi
+if [ -f $HOME/.bashrc ]; then
+  mv $HOME/.bashrc $BACKUP_DIR/bashrc
+fi
 
 #if [ -f $HOME/.gitconfig ]; then
 #  mv $HOME/.gitconfig $BACKUP_DIR/gitconfig
@@ -31,7 +31,7 @@ fi
 ln -s $CWD/bash_profile $HOME/.bash_profile
 
 # set up .bashrc
-#ln -s $CWD/bashrc $HOME/.bashrc
+ln -s $CWD/bashrc $HOME/.bashrc
 
 # set up dot config files
 #ln -s $CWD/config.d/gitconfig $HOME/.gitconfig
