@@ -13,6 +13,7 @@ export VM_PLATFORM_JS_BACKOFFICE=/Users/graza/gd/platform-frontend
 # Perforce settings
 #
 export P4CONFIG=.p4config
+export P4IGNORE=.p4ignore
 
 ##
 ## Git settings
