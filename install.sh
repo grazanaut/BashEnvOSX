@@ -4,7 +4,7 @@ BACKUP_DIR=$HOME/.dotfiles_backup/`date +'%Y-%m-%d-%H-%M'`
 mkdir -p $BACKUP_DIR
 
 # back up existing files
-echo "Backup previous dotfiles to ~/DOTFILES_BACKUP\n"
+echo "Backup previous dotfiles to ~./dotfiles_backup/[date]\n"
 
 if [ -f $HOME/.bash_profile ]; then
   mv $HOME/.bash_profile $BACKUP_DIR/bash_profile

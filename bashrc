@@ -3,11 +3,16 @@
 PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
 export PATH
 
-##
-## GD VM stuff
-##
+# Vagrant VM settings
 
-export VM_PLATFORM_JS_BACKOFFICE=~/gd/platform-frontend
+export VM_PLATFORM_JS_FRONTEND=/Users/graza/gd/platform-js-frontend
+export VM_PLATFORM_JS_SPACEBUILDER=/Users/graza/gd/platform-js-spacebuilder
+export VM_PLATFORM_JS_BACKOFFICE=/Users/graza/gd/platform-frontend
+
+#
+# Perforce settings
+#
+export P4CONFIG=.p4config
 
 ##
 ## Git settings
@@ -38,13 +43,18 @@ export NODE_HOME='/usr/local/lib/node'
 # -G add color to ls and -F to show / for folders and @ for symlinks
 alias ls='ls -FG'
 alias ll='ls -FGla'
+
 alias nodester='/usr/local/node_modules/nodester-cli/bin/nodester.js' 
-if [ -f /usr/local/bin/mvim ]; then
-  alias vim='/usr/local/bin/mvim' 
-fi
 # other aliases
 alias sshvm='ssh dickwolf@local.test'
+if [ `which mvim` ]; then 
+  alias vim='echo vim aliased to mvim in .bashrc; mvim'
+elif [ -f /usr/local/bin/mvim ]; then
+  alias vim='echo vim aliased to /usr/local/bin/mvim in .bashrc; /usr/local/bin/mvim' 
+fi
 
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
 # alias brew installation of ctags if installed
 if [ -f `brew --prefix`/bin/ctags ]; then
   alias ctags="`brew --prefix`/bin/ctags"
