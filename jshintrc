@@ -1,0 +1,18 @@
+{
+  "node": true,
+  "browser": true,
+  "debug": false,
+  "devel": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "immed": true,
+  "plusplus": false,
+  "newcap": true,
+  "onevar": true,
+  "undef": true,
+  "asi": false,
+  "predef" : [
+    "require"
+  ],
+  "jquery": true
+}

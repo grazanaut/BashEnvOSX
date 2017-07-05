@@ -22,9 +22,13 @@ fi
 #  mv $HOME/.gitignore $BACKUP_DIR/gitignore
 #fi
 
-#if [ -f $HOME/.jshintrc ]; then
-#  mv $HOME/.jshintrc $BACKUP_DIR/jshintrc
-#fi
+if [ -f $HOME/.jshintrc ]; then
+  mv $HOME/.jshintrc $BACKUP_DIR/jshintrc
+fi
+
+if [ -f $HOME/.jshintignore ]; then
+  mv $HOME/.jshintignore $BACKUP_DIR/jshintignore
+fi
 
 
 # set up .bashrc
@@ -36,7 +40,9 @@ ln -s $CWD/bashrc $HOME/.bashrc
 # set up dot config files
 #ln -s $CWD/config.d/gitconfig $HOME/.gitconfig
 #ln -s $CWD/config.d/gitignore $HOME/.gitignore
-#ln -s $CWD/config.d/jshintrc $HOME/.jshintrc
+# default jshintrc (override in project directories)
+ln -s $CWD/jshintrc $HOME/.jshintrc
+ln -s $CWD/jshintignore $HOME/.jshintignore
 
 # export the DOTFILES directory for use in .bashrc
 #echo $CWD > $HOME/.dotfiles_dir
