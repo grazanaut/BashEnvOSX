@@ -68,6 +68,9 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 # Add nvm to path (for JSHint in Syntastic VIM - throws a wobbly otherwise)
+# NB!! Make sure jshint is installed for that node version
+#      (for example npm install -g jshint will put it in the
+#       node_modules folder under the in-use version)
 export PATH="$(dirname `nvm which current`):$PATH"
 
 
