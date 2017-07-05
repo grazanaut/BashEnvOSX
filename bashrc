@@ -53,9 +53,21 @@ elif [ -f /usr/local/bin/mvim ]; then
   alias vim='echo vim aliased to /usr/local/bin/mvim in .bashrc; /usr/local/bin/mvim' 
 fi
 
+# Add "git-fu" scripts to path
+export PATH="/Users/graza/.git-fu/bin:$PATH"
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 # alias brew installation of ctags if installed
 if [ -f `brew --prefix`/bin/ctags ]; then
   alias ctags="`brew --prefix`/bin/ctags"
 fi
+
+# Node Version Manager 
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+# Add nvm to path (for JSHint in Syntastic VIM - throws a wobbly otherwise)
+export PATH="$(dirname `nvm which current`):$PATH"
+
+

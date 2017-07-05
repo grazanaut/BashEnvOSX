@@ -1,4 +1,6 @@
 {
+  "esnext": true,
+  "esversion": 6,
   "node": true,
   "browser": true,
   "debug": false,
